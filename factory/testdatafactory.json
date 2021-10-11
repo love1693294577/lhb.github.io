@@ -1,0 +1,9 @@
+{
+	"name": "testdatafactory",
+	"location": "chinanorth2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cd9bc885-e568-4f23-a2ae-3540dd9c96af",
+		"tenantId": "b388b808-0ec9-4a09-a414-a7cbbd8b7e9b"
+	}
+}
