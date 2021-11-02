@@ -1,0 +1,31 @@
+{
+	"name": "integrationRuntime7",
+	"properties": {
+		"type": "Managed",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "China North 2",
+				"nodeSize": "Standard_D8_v3",
+				"numberOfNodes": 2,
+				"maxParallelExecutionsPerNode": 4,
+				"vNetProperties": {
+					"vNetId": "/subscriptions/4ce3c57b-ceee-41b2-8588-2ababd381b7a/resourceGroups/testhdp/providers/Microsoft.Network/virtualNetworks/hdihadoopvnet",
+					"subnet": "test01"
+				}
+			},
+			"ssisProperties": {
+				"catalogInfo": {
+					"catalogServerEndpoint": "testdw123.database.chinacloudapi.cn",
+					"catalogAdminUserName": "admin123",
+					"catalogAdminPassword": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"catalogPricingTier": "S1"
+				},
+				"edition": "Standard",
+				"licenseType": "LicenseIncluded"
+			}
+		}
+	}
+}
