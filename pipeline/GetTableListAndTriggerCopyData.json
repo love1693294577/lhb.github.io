@@ -22,10 +22,6 @@
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
-					"dataset": {
-						"referenceName": "AzureSqlTable1",
-						"type": "DatasetReference"
-					},
 					"firstRowOnly": false
 				}
 			},
