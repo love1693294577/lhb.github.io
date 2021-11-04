@@ -24,10 +24,6 @@
 						},
 						"partitionOption": "None"
 					},
-					"dataset": {
-						"referenceName": "External_Control_Table",
-						"type": "DatasetReference"
-					},
 					"firstRowOnly": false
 				}
 			},
@@ -81,31 +77,7 @@
 						}
 					},
 					"enableStaging": false
-				},
-				"inputs": [
-					{
-						"referenceName": "AWS_S3_Source_Store",
-						"type": "DatasetReference",
-						"parameters": {
-							"AWS_S3_bucketName": {
-								"value": "@pipeline().parameters.AWS_S3_bucketName",
-								"type": "Expression"
-							}
-						}
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "Azure_Storage_Destination_Store",
-						"type": "DatasetReference",
-						"parameters": {
-							"Azure_Storage_fileSystem": {
-								"value": "@pipeline().parameters.Azure_Storage_fileSystem",
-								"type": "Expression"
-							}
-						}
-					}
-				]
+				}
 			},
 			{
 				"name": "Insert_JobRunTime_success",
