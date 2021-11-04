@@ -41,28 +41,8 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
-				},
-				"inputs": [
-					{
-						"referenceName": "ADLS_input",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "ADLS_output",
-						"type": "DatasetReference"
-					}
-				]
+					"enableStaging": false
+				}
 			},
 			{
 				"name": "Get Metadata1",
@@ -77,10 +57,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "ADLS_input",
-						"type": "DatasetReference"
-					},
 					"fieldList": [
 						"itemName",
 						"childItems",
