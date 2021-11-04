@@ -1,0 +1,73 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "testdatafactory"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "testdw123.database.chinacloudapi.cn"
+		},
+		"integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "admin123"
+		},
+		"integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
+		},
+		"integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "testdw123.database.chinacloudapi.cn"
+		},
+		"integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "admin123"
+		},
+		"integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
+		},
+		"integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "testdw123.database.chinacloudapi.cn"
+		},
+		"integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "admin123"
+		},
+		"integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
+		},
+		"AzureBlobStorage1_properties_privateLinkResourceId": {
+			"value": "/subscriptions/4ce3c57b-ceee-41b2-8588-2ababd381b7a/resourceGroups/testhdp/providers/Microsoft.Storage/storageAccounts/test122"
+		},
+		"AzureBlobStorage1_properties_groupId": {
+			"value": "blob"
+		},
+		"AzureBlobStorage1_properties_fqdns": {
+			"value": [
+				"test122.blob.core.chinacloudapi.cn"
+			]
+		},
+		"AzureBlobStorage2_properties_privateLinkResourceId": {
+			"value": "/subscriptions/4ce3c57b-ceee-41b2-8588-2ababd381b7a/resourceGroups/testhdp/providers/Microsoft.Storage/storageAccounts/testgen3"
+		},
+		"AzureBlobStorage2_properties_groupId": {
+			"value": "blob"
+		},
+		"AzureSqlDatabase1_properties_privateLinkResourceId": {
+			"value": "/subscriptions/4ce3c57b-ceee-41b2-8588-2ababd381b7a/resourceGroups/testhdp/providers/Microsoft.Sql/servers/testdb"
+		},
+		"AzureSqlDatabase1_properties_groupId": {
+			"value": "sqlServer"
+		},
+		"AzureSqlDatabase1_properties_fqdns": {
+			"value": [
+				"testdb.database.chinacloudapi.cn"
+			]
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

@@ -1,0 +1,169 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "testdatafactory"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"type": "string",
+			"defaultValue": "testdw123.database.chinacloudapi.cn"
+		},
+		"integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"type": "string",
+			"defaultValue": "admin123"
+		},
+		"integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"type": "secureString"
+		},
+		"integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"type": "string",
+			"defaultValue": "testdw123.database.chinacloudapi.cn"
+		},
+		"integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"type": "string",
+			"defaultValue": "admin123"
+		},
+		"integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"type": "secureString"
+		},
+		"integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"type": "string",
+			"defaultValue": "testdw123.database.chinacloudapi.cn"
+		},
+		"integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"type": "string",
+			"defaultValue": "admin123"
+		},
+		"integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"type": "secureString"
+		},
+		"AzureBlobStorage1_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/4ce3c57b-ceee-41b2-8588-2ababd381b7a/resourceGroups/testhdp/providers/Microsoft.Storage/storageAccounts/test122"
+		},
+		"AzureBlobStorage1_properties_groupId": {
+			"type": "string",
+			"defaultValue": "blob"
+		},
+		"AzureBlobStorage1_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"test122.blob.core.chinacloudapi.cn"
+			]
+		},
+		"AzureBlobStorage2_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/4ce3c57b-ceee-41b2-8588-2ababd381b7a/resourceGroups/testhdp/providers/Microsoft.Storage/storageAccounts/testgen3"
+		},
+		"AzureBlobStorage2_properties_groupId": {
+			"type": "string",
+			"defaultValue": "blob"
+		},
+		"AzureSqlDatabase1_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/4ce3c57b-ceee-41b2-8588-2ababd381b7a/resourceGroups/testhdp/providers/Microsoft.Sql/servers/testdb"
+		},
+		"AzureSqlDatabase1_properties_groupId": {
+			"type": "string",
+			"defaultValue": "sqlServer"
+		},
+		"AzureSqlDatabase1_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"testdb.database.chinacloudapi.cn"
+			]
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "testdatafactory_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+						"value": "[parameters('integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]"
+					},
+					"integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+						"value": "[parameters('integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]"
+					},
+					"integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+						"value": "[parameters('integrationRuntime3_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
+					},
+					"integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+						"value": "[parameters('integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]"
+					},
+					"integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+						"value": "[parameters('integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]"
+					},
+					"integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+						"value": "[parameters('integrationRuntime6_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
+					},
+					"integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+						"value": "[parameters('integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]"
+					},
+					"integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+						"value": "[parameters('integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]"
+					},
+					"integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+						"value": "[parameters('integrationRuntime7_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
+					},
+					"AzureBlobStorage1_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureBlobStorage1_properties_privateLinkResourceId')]"
+					},
+					"AzureBlobStorage1_properties_groupId": {
+						"value": "[parameters('AzureBlobStorage1_properties_groupId')]"
+					},
+					"AzureBlobStorage1_properties_fqdns": {
+						"value": "[parameters('AzureBlobStorage1_properties_fqdns')]"
+					},
+					"AzureBlobStorage2_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureBlobStorage2_properties_privateLinkResourceId')]"
+					},
+					"AzureBlobStorage2_properties_groupId": {
+						"value": "[parameters('AzureBlobStorage2_properties_groupId')]"
+					},
+					"AzureSqlDatabase1_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureSqlDatabase1_properties_privateLinkResourceId')]"
+					},
+					"AzureSqlDatabase1_properties_groupId": {
+						"value": "[parameters('AzureSqlDatabase1_properties_groupId')]"
+					},
+					"AzureSqlDatabase1_properties_fqdns": {
+						"value": "[parameters('AzureSqlDatabase1_properties_fqdns')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
